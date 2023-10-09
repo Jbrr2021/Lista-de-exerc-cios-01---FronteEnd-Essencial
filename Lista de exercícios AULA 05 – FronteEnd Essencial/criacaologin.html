@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criação de Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 210mm;
+        height: 297mm;
+        margin: 20mm auto;
+        padding: 10mm;
+        border: 1px solid #ccc;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      label,
+      input {
+        display: block;
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      input {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <script>
+      function validarFormulario() {
+        var username = document.getElementById("username").value;
+        var senha = document.getElementById("senha").value;
+
+        if (username == "" || senha == "") {
+          alert("Por favor, preencha todos os campos.");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Criação de Login</h1>
+
+    <form action="#" method="post" onsubmit="return validarFormulario()">
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" id="username" name="username" />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" />
+
+      <input type="submit" value="Criar Conta" />
+    </form>
+  </body>
+</html>
